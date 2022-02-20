@@ -10,8 +10,8 @@ app.use(express.json());
 app.use('/', require('./src/routes/index'))
 app.use('/api', require('./src/routes/urls'))
 
-const defaultPort = process.env.BASE || 5000
+const defaultPort = 4000
 
-app.listen(()=> {
+app.listen(defaultPort, ()=> {
     console.log(`Server is running at ${defaultPort}`)
 })
